@@ -1,0 +1,177 @@
+/* ===============
+   Base element styles
+================== */
+
+* {
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  margin: 0px;
+  padding: 0px;
+  outline: 0;
+  font-size: 100%;
+  color: #3B3B3B;
+}
+
+h1 {
+  font-family: 'Abril Fatface', cursive;
+  color: #2428BF;
+  margin-top: 0px;
+  padding-top: 5px;
+  font-size: 2.2em;
+}
+
+h2 {
+  font-size: 1.2em;
+}
+
+/* ===============
+  Layout & grid
+================== */
+
+.container {
+  min-width: 320px;
+  padding: 1.3em 2em;
+}
+
+.header {
+  padding: 30px 0;
+}
+
+#sticky {
+  height: 88px;
+  background-color: white;
+}
+
+.gallery {
+  display: grid;
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.thumbnail {
+  border-radius: 10px;
+  width: 100%;
+  box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.4);
+  cursor: pointer;
+  border: 3px solid white;
+}
+
+.thumbnail:hover {
+  border: 3px solid #2428BF;
+}
+
+/* ===============
+  Search bar styles
+================== */
+
+.search-bar {
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.search-box {
+  flex-grow: 5;
+  padding: 10px;
+  border-radius: 3px;
+  font-size: .9em;
+  border: 3px solid white;
+  box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.4);
+}
+
+.search-box ::placeholder {
+  color: #C2C2C2;
+}
+
+.search-box:focus {
+  border: 3px solid #2428BF;
+}
+
+.search-button {
+  flex-grow: 1;
+  margin-left: -5px;
+  cursor: pointer;
+  border: 3px solid #2428BF;
+  box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.4);
+  background-color: #2428BF;
+  border-radius: 3px;
+}
+
+.search-button:hover {
+  background-color: #475BBF;
+  border-color: #475BBF;
+}
+
+.fa-search {
+  color: white;
+}
+
+/* ===============
+  Plugin styles
+================== */
+
+.lb-data .lb-caption {
+  color: white;
+
+}
+
+/* ===============
+  Media queries
+================== */
+
+@media screen and (min-width: 500px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+
+  .container {
+    padding: 30px 80px;
+  }
+
+  .search-bar {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  h1,
+  h2 {
+    text-align: center;
+  }
+
+  .container {
+    padding: 50px 120px;
+  }
+
+  .header {
+    padding: 40px 0;
+  }
+
+  .search-bar {
+    margin-bottom: 30px;
+    }
+
+  .gallery {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: auto;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+  }
+
+  .search-box {
+    padding: 15px;
+    font-size: 1em;
+  }
+
+  .search-button::after {
+    content: "Search";
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+  }
+}
